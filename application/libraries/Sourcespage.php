@@ -37,6 +37,7 @@ class Sourcespage
        <script src="'.base_url().'appsources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
        <!-- iCheck -->
        <script src="'.base_url().'appsources/plugins/iCheck/icheck.min.js"></script>
+       <script src="'.base_url().'appsources/module/applogin.js"></script>
        <script>
          $(function () {
            $("input").iCheck({
