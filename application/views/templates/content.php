@@ -3,11 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< HEAD
   <title>Login| Dashboard</title>
-=======
-  <title>AdminLTE 2 | Dashboard</title>
->>>>>>> develop
   <!-- Tell the browser to be responsive to screen width -->
   <?=$this->sourcespage->dashboardcss()?>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

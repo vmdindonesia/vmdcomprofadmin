@@ -3,11 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< HEAD
   <title>VMD Indonesia| Log in</title>
-=======
-  <title>AdminLTE 2 | Log in</title>
->>>>>>> develop
   <!-- Tell the browser to be responsive to screen width -->
   <?=$this->sourcespage->sourceslogincss();
   ?>
