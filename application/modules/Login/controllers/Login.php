@@ -14,6 +14,7 @@ class Login extends MY_Controller {
 	{
 		$this->load->view('auth');
     }
+    
     function validation()
     {
         $username = $_POST['username'];
