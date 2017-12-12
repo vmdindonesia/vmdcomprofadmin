@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
   <title>Login| Dashboard</title>
+=======
+  <title>VMD IDN | Dashboard</title>
+  
+>>>>>>> develop
   <!-- Tell the browser to be responsive to screen width -->
   <?=$this->sourcespage->dashboardcss()?>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,7 +30,11 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
+<<<<<<< HEAD
       <span class="logo-lg"><b>VMD</b>LTE</span>
+=======
+      <span class="logo-lg"><b>VMD</b>IDN</span>
+>>>>>>> develop
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
