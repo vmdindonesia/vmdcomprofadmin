@@ -34,7 +34,9 @@ class Sourcespage
 
    function dashboardcss()
    {
-    $ret = '<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    $ret = '
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="'.base_url().'appsources/dist/pp.png">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="'.base_url().'appsources/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
