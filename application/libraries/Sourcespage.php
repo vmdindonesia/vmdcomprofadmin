@@ -120,7 +120,8 @@ class Sourcespage
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="'.base_url().'appsources/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="'.base_url().'appsources/dist/js/demo.js"></script>';
+    <script src="'.base_url().'appsources/dist/js/demo.js"></script>
+    <script src="'.base_url().'appsources/module/appaboutus.js"></script>';
     return $ret;
    }
 }
