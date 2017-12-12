@@ -122,6 +122,7 @@ class Sourcespage
     <!-- AdminLTE for demo purposes -->
     <script src="'.base_url().'appsources/dist/js/demo.js"></script>
     <script src="'.base_url().'appsources/module/appaboutus.js"></script>';
+    <script src="'.base_url().'appsources/module/appteam.js"></script>';
     return $ret;
    }
 }
