@@ -4,7 +4,7 @@ var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split
 $('#formclient').submit(function(event){
 
     event.preventDefault();
-    var form = $('#formclient');
+    var form = new FormData(this);    
 
 // alert(toUrl);
 // return;
@@ -12,7 +12,10 @@ $('#formclient').submit(function(event){
 
         type:'POST',
         url:toUrl+'/client/saveclient',
-        data:form.serialize(),
+        data:form,
+        cache: false,
+        contentType: false,
+        processData: false,
         success:function(data){
             alert(data);
             return;
