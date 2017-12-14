@@ -17,7 +17,7 @@ class Layout
         $ret='<ul class="sidebar-menu" data-widget="tree">';
         if ($query->num_rows()>0){
             foreach($query->result() as $row){
-                $ret .='<li><a href="'.base_url().$row->url.'"><i class="fa fa-circle-o"></i>'.$row->nama_menu.'</a></li>';
+                $ret .='<li><a href="'.base_url().$row->url.'"><i class="fa '.$row->icon.'"></i>'.$row->nama_menu.'</a></li>';
             }
         }
         $ret .='</ul>';
