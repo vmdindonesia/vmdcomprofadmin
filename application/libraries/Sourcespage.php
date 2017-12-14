@@ -5,6 +5,7 @@ class Sourcespage
     function sourceslogincss()
    {
      $ret = '
+     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="'.base_url().'appsources/dist/pp.png">
      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="'.base_url().'appsources/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -33,7 +34,9 @@ class Sourcespage
 
    function dashboardcss()
    {
-    $ret = '<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    $ret = '
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="'.base_url().'appsources/dist/pp.png">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="'.base_url().'appsources/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -117,7 +120,12 @@ class Sourcespage
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="'.base_url().'appsources/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="'.base_url().'appsources/dist/js/demo.js"></script>';
+    <script src="'.base_url().'appsources/dist/js/demo.js"></script>
+    <script src="'.base_url().'appsources/module/appclient.js"></script>
+    <script src="'.base_url().'appsources/module/appaboutus.js"></script>
+    <script src="'.base_url().'appsources/module/appteam.js"></script>
+    <script src="'.base_url().'appsources/module/appvission.js"></script>
+    <script src="'.base_url().'appsources/module/appmission.js"></script>';
     return $ret;
    }
 }
