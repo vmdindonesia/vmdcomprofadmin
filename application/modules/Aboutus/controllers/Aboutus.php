@@ -39,7 +39,5 @@ class Aboutus extends MY_Controller {
 				echo "gagal";
 			}
 		} 
-
-		
 	}
 }
