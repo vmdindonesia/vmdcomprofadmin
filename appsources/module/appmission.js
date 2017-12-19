@@ -1,21 +1,18 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 var getUrl 	= window.location;
 var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-$('#formclient').submit(function(event){
+$('#form_mission').submit(function(event){
 
     event.preventDefault();
-    var form = new FormData(this);    
+    var form = $('#form_mission');
 
 // alert(toUrl);
 // return;
     $.ajax({
 
         type:'POST',
-        url:toUrl+'/client/saveclient',
-        data:form,
-        cache: false,
-        contentType: false,
-        processData: false,
+        url:toUrl+'/vnm/mission',
+        data:form.serialize(),
         success:function(data){
             alert(data);
             return;

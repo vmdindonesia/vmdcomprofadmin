@@ -1,21 +1,15 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 var getUrl 	= window.location;
 var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-$('#formclient').submit(function(event){
+$('#form_login').submit(function(event){
 
     event.preventDefault();
-    var form = new FormData(this);    
-
-// alert(toUrl);
-// return;
+    var form = $('#form_login');
     $.ajax({
 
         type:'POST',
-        url:toUrl+'/client/saveclient',
-        data:form,
-        cache: false,
-        contentType: false,
-        processData: false,
+        url:toUrl+'/login/validation',
+        data:form.serialize(),
         success:function(data){
             alert(data);
             return;
