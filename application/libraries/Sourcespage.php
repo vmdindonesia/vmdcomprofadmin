@@ -123,13 +123,9 @@ class Sourcespage
     <script src="'.base_url().'appsources/dist/js/demo.js"></script>
     <script src="'.base_url().'appsources/module/appclient.js"></script>
     <script src="'.base_url().'appsources/module/appaboutus.js"></script>
-<<<<<<< HEAD
-    <script src="'.base_url().'appsources/module/appteam.js"></script>';
-=======
     <script src="'.base_url().'appsources/module/appteam.js"></script>
     <script src="'.base_url().'appsources/module/appvission.js"></script>
     <script src="'.base_url().'appsources/module/appmission.js"></script>';
->>>>>>> develop
     return $ret;
    }
 }
