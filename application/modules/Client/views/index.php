@@ -11,6 +11,8 @@ $dataclient = "";
         <td>$id_client</td>
         <td>$name_client</td>
         <td><img width='100px' src= '$logo_client'/> </td>
+        <td> <span onClick='delete_client(\"$id_client\")' class='btn btn-primary'>x</span> </td>
+        <th> <span href='id_client(\"$id_client\")' class='btn btn-primary'>Edit</span> </td>
       </tr>
       "; 
     }
