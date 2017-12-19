@@ -34,3 +34,24 @@ $('#formclient').submit(function(event){
 		}
     })
 })
+function delete_client(id_client){
+    var getUrl 	= window.location;
+    var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    $.ajax({
+        
+                type:'POST',
+                url:toUrl+'/client/delete_client',
+                data:{id_client:id_client},
+                success:function(data){
+                    if (data="sukses"){
+                        window.location.reload();
+                    }else
+                    {
+                        alert("gagal delete");
+                    }
+                },error: function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.responseText);
+                }
+            })
+
+}
