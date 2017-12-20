@@ -28,7 +28,6 @@ class Client extends MY_Controller {
 		if ( ! $this->upload->do_upload('logo')){
 			echo "upload_failed";
 		}else{
-            $this->upload->do_upload("logo");
             $logo=$this->upload->data();
             $nama_logo=$logo["file_name"];
             $url=base_url()."appsources/logo/".$nama_logo;
@@ -43,8 +42,40 @@ class Client extends MY_Controller {
             {
                 echo "gagal";
             }
-		}
-        
-    }
-
+        }
 }
+        function delete_client()
+        {
+            $id_client=$_POST['id_client'];
+            $sql="DELETE FROM client WHERE id_client='$id_client' ";
+            $query=$this->db->query($sql);
+            if ($query)
+            {
+                echo "sukses";
+                return;
+            }
+            else
+            {
+                echo "gagal";
+                return;
+            }
+
+        }
+        function edit_client()
+        {
+            $id_client=$_POST['id_client'];
+            $sql="UPDATE FROM client WHERE id_client='$id_client' ";
+            $query=$this->db->query($sql);
+            if ($query)
+            {
+                echo "sukses";
+                return;
+            }
+            else
+            {
+                echo "gagal";
+                return;
+            }
+
+        }
+ }
