@@ -81,9 +81,6 @@ $('#formeditteam').submit(function(event){
 
     event.preventDefault();
     var form = new FormData(this);
-
-// alert(toUrl);
-// return;
     $.ajax({
 
         type:'POST',
