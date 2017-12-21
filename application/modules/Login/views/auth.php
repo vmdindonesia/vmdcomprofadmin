@@ -3,15 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< Updated upstream
-  <title>VMD Indonesia | Log in</title>
-=======
-<<<<<<< HEAD
-  <title>VMD Indonesia| Log in</title>
-=======
 <title>VMD Indonesia | Log in</title>
->>>>>>> develop
->>>>>>> Stashed changes
   <!-- Tell the browser to be responsive to screen width -->
   <?=$this->sourcespage->sourceslogincss();
   ?>

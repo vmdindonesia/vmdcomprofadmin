@@ -47,10 +47,7 @@ class Team extends MY_Controller {
             echo "gagal";
             return;
         }
-
-
     }
-}
 
     function deleteteam(){
         $team_id = $_POST['team_id'];
@@ -111,5 +108,4 @@ class Team extends MY_Controller {
 
 
     }
-}
 }
