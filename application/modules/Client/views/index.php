@@ -12,7 +12,7 @@ $dataclient = "";
         <td>$name_client</td>
         <td><img width='100px' src= '$logo_client'/> </td>
         <td> <span onClick='delete_client(\"$id_client\")' class='btn btn-primary'>x</span> </td>
-        <th> <span href='id_client(\"$id_client\")' class='btn btn-primary'>Edit</span> </td>
+        <th> <a href='".base_url()."/client/edit_client/$id_client' class='btn btn-primary'>Edit</a > </td>
       </tr>
       "; 
     }
