@@ -42,6 +42,12 @@ $dataTeam = "";
                   <label for="exampleInputPassword1">Jabatan</label>
                   <input name="nama_jabatan" type="text" value="<?=$team_jabatan?>" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Jabatan">
                 </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" name="image_team" id="exampleInputFile">
+                  <input type="hidden" name="logo_before" value="<?=$team_img?>"/>
+                </div>
+                <img src="<?=$team_img?>" />
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>

@@ -47,10 +47,7 @@ class Team extends MY_Controller {
             echo "gagal";
             return;
         }
-
-
     }
-}
 
     function deleteteam(){
         $team_id = $_POST['team_id'];
@@ -79,8 +76,24 @@ class Team extends MY_Controller {
         $nama_anggota = $_POST["nama_anggota"];
         $nama_divisi = $_POST["nama_divisi"];
         $nama_jabatan = $_POST["nama_jabatan"];
+        $logo_before = $_POST["logo_before"];
         $team_id = $_POST["team_id"];
-        $sql = "UPDATE team_info SET team_name='$nama_anggota', team_divisi='$nama_divisi', team_jabatan='$nama_jabatan' WHERE team_id='$team_id'";
+        $config['upload_path'] = './appsources/image_team/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = 5100;
+
+        $url_before = str_replace(base_url()."appsources/image_team/","",$logo_before);
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('image_team')){
+            echo "upload_failed";
+        }else{
+            $image=$this->upload->data();
+            $nama_image=$image["file_name"];
+            $url=base_url()."appsources/image_team/".$nama_image;
+            @unlink($config['upload_path'].$url_before);
+        $sql = "UPDATE team_info SET team_name='$nama_anggota', team_divisi='$nama_divisi', team_jabatan='$nama_jabatan', team_img='$url' WHERE team_id='$team_id'";
         $query = $this->db->query($sql);
         if($query)
         {
