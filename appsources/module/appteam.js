@@ -39,7 +39,7 @@ function delete_team(team_id){
     $.ajax({
         
                 type:'POST',
-                url:toUrl+'/team/deleteteam',
+                url:toUrl+'/team/delete_team',
                 data:{team_id:team_id},
                 success:function(data){
                     if(data="sukses"){
