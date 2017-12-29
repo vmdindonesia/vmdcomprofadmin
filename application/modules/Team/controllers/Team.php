@@ -35,24 +35,31 @@ class Team extends MY_Controller {
             $nama_image=$image["file_name"];
             $url=base_url()."appsources/image_team/".$nama_image;
 
-        $sql = "INSERT into team_info values ('','$nama_anggota','$nama_divisi','$nama_jabatan','$url')";
-        $query = $this->db->query($sql);
-        if($query)
-        {
-            echo "sukses";
-            return;
-        }
-        else
-        {
-            echo "gagal";
-            return;
+            $sql = "INSERT into team_info values ('','$nama_anggota','$nama_divisi','$nama_jabatan','$url')";
+            $query = $this->db->query($sql);
+            if($query)
+            {
+              echo "sukses";
+              return;
+            }
+            else
+            {
+              echo "gagal";
+              return;
+            }
         }
     }
+}
 
-    function deleteteam(){
+    function delete_team(){
         $team_id = $_POST['team_id'];
+        $logo_before = $_POST["logo_before"];
         $sql = "DELETE FROM team_info WHERE team_id='$team_id'";
         $query = $this->db->query($sql);
+        $url_before = str_replace(base_url().'appsources/image_team/',"",$logo_before);
+        // echo $url_before;
+        // return;
+        @unlink('./appsources/image_team/'.$url_before);
         if($query)
         {
             echo "sukses";
@@ -93,19 +100,19 @@ class Team extends MY_Controller {
             $nama_image=$image["file_name"];
             $url=base_url()."appsources/image_team/".$nama_image;
             @unlink($config['upload_path'].$url_before);
-        $sql = "UPDATE team_info SET team_name='$nama_anggota', team_divisi='$nama_divisi', team_jabatan='$nama_jabatan', team_img='$url' WHERE team_id='$team_id'";
-        $query = $this->db->query($sql);
-        if($query)
-        {
-            echo "sukses";
-            return;
+            $sql = "UPDATE team_info SET team_name='$nama_anggota', team_divisi='$nama_divisi', team_jabatan='$nama_jabatan', team_img='$url' WHERE team_id='$team_id'";
+            $query = $this->db->query($sql);
+            if($query)
+            {
+              echo "sukses";
+              return;
+            }
+            else
+            {
+              echo "gagal";
+              return;
+            }
         }
-        else
-        {
-            echo "gagal";
-            return;
-        }
-
-
     }
 }
+    }
