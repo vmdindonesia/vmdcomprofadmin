@@ -40,13 +40,8 @@ function delete_team(team_id){
     $.ajax({
         
                 type:'POST',
-<<<<<<< Updated upstream
                 url:toUrl+'/team/delete_team',
-                data:{team_id:team_id},
-=======
-                url:toUrl+'/team/deleteteam',
                 data:{team_id:team_id,logo_before:team_img},
->>>>>>> Stashed changes
                 success:function(data){
                     if(data="sukses"){
                         window.location.reload();
