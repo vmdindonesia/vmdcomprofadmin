@@ -14,7 +14,7 @@ $dataTeam = "";
         <td>$team_name</td>
         <td>$team_divisi</td>
         <td>$team_jabatan</td>
-        <td><input type='hidden' value='$team_img' id='team_img'><img width='100px' src= '$team_img'/></td>
+        <td><input type='hidden' value='$team_img' id='team_img_$team_id'><img width='100px' src= '$team_img'/></td>
         <td><span onClick='delete_team(\"$team_id\")' class='btn btn-primary'>X</span></td>
         <th><a href='".base_url()."/team/edit_team/".$team_id."' class='btn btn-primary'>Edit</a></th>
       </tr>
