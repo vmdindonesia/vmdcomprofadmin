@@ -21,9 +21,7 @@ $('#formteam').submit(function(event){
                 window.location.href=toUrl+"/team";
             }
             else{
-                $("#password").val("");
-                alert("Password atau username salah");
-
+                alert("Gagal upload");
             }
 
         },error: function(xhr, ajaxOptions, thrownError){            
@@ -36,7 +34,7 @@ $('#formteam').submit(function(event){
 function delete_team(team_id){
     var getUrl 	= window.location;
     var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-    var team_img = $("#team_img").val();
+    var team_img = $("#team_img_"+team_id).val();
     $.ajax({
         
                 type:'POST',
@@ -96,7 +94,7 @@ $('#formeditteam').submit(function(event){
             }
             else{
                 $("#password").val("");
-                alert("Password atau username salah");
+                alert("Gagal Upload");
 
             }
 

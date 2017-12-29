@@ -28,8 +28,9 @@ class Team extends MY_Controller {
 
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('image_team')){
+        if (!$this->upload->do_upload('image_team')){
             echo "upload_failed";
+            return;
         }else{
             $image=$this->upload->data();
             $nama_image=$image["file_name"];
