@@ -49,11 +49,17 @@ class Team extends MY_Controller {
             }
         }
     }
+}
 
     function delete_team(){
         $team_id = $_POST['team_id'];
+        $logo_before = $_POST["logo_before"];
         $sql = "DELETE FROM team_info WHERE team_id='$team_id'";
         $query = $this->db->query($sql);
+        $url_before = str_replace(base_url().'appsources/image_team/',"",$logo_before);
+        // echo $url_before;
+        // return;
+        @unlink('./appsources/image_team/'.$url_before);
         if($query)
         {
             echo "sukses";
@@ -109,3 +115,4 @@ class Team extends MY_Controller {
         }
     }
 }
+    }
