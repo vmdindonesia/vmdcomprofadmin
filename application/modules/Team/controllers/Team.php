@@ -28,8 +28,9 @@ class Team extends MY_Controller {
 
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('image_team')){
+        if (!$this->upload->do_upload('image_team')){
             echo "upload_failed";
+            return;
         }else{
             $image=$this->upload->data();
             $nama_image=$image["file_name"];
@@ -52,8 +53,11 @@ class Team extends MY_Controller {
 
     function delete_team(){
         $team_id = $_POST['team_id'];
+        $logo_before = $_POST["logo_before"];
         $sql = "DELETE FROM team_info WHERE team_id='$team_id'";
         $query = $this->db->query($sql);
+        $url_before = str_replace(base_url().'appsources/image_team/',"",$logo_before);
+        @unlink('./appsources/image_team/'.$url_before);
         if($query)
         {
             echo "sukses";

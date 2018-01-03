@@ -18,12 +18,10 @@ $('#formteam').submit(function(event){
         processData: false,
         success:function(data){
             if (data=='sukses'){
-                window.location.href=toUrl+"/Dashboard";
+                window.location.href=toUrl+"/team";
             }
             else{
-                $("#password").val("");
-                alert("Password atau username salah");
-
+                alert("Gagal upload");
             }
 
         },error: function(xhr, ajaxOptions, thrownError){            
@@ -36,11 +34,12 @@ $('#formteam').submit(function(event){
 function delete_team(team_id){
     var getUrl 	= window.location;
     var toUrl 	= getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    var team_img = $("#team_img_"+team_id).val();
     $.ajax({
         
                 type:'POST',
                 url:toUrl+'/team/delete_team',
-                data:{team_id:team_id},
+                data:{team_id:team_id,logo_before:team_img},
                 success:function(data){
                     if(data="sukses"){
                         window.location.reload();
@@ -95,7 +94,7 @@ $('#formeditteam').submit(function(event){
             }
             else{
                 $("#password").val("");
-                alert("Password atau username salah");
+                alert("Gagal Upload");
 
             }
 
